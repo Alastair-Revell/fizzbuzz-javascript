@@ -1,10 +1,13 @@
 describe('fizzbuzz', function() {
   it('should print the numbers one to 100', function() {
-    console.log = jasmine.createSpy("log")
-    fizzbuzz()
-    for (var number=1; number <= 100; number += 1) {
-      expect(console.log).toHaveBeenCalledWith(number)
-    }
-    expect(console.log).toHaveBeenCalledWith(1)
+      expect(fizzbuzz(2)).toEqual(2)
+  })
+
+  it('should print fizz when divisible by 3', function() {
+    expect(fizzbuzz(3)).toEqual('fizz')
+  })
+
+  it('should print fizz when divisible by 3', function() {
+    expect(fizzbuzz(5)).toEqual('buzz')
   })
 })
